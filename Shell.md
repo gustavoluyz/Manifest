@@ -10,6 +10,13 @@ There is no footer; the Shell is visually only the very top. This allows Apps to
 
 The Shell has an instance of [Vault](https://iiif-canvas-panel.netlify.app/docs/components/vault/): the loaded App gets a reference to this Vault and all the App's manipulation of the IIIF must happen via this Vault.
 
+Shell responsibilities
+
+ - The Shell looks after Vault. 
+ - The Shell manages [[Undo and Redo]] - rolls Vault back (or forward); Apps can respond to this.
+ - Importing, Loading, Saving (see below)
+ - [[Preview]]
+
 [[Persistence]] is more complicated than new users might expect; the Shell's `File` menu launches whatever mechanisms are [[configured|Configuration]] to get IIIF JSON into the Vault, and to take that JSON from the Vault and persist it somewhere else. These are `Save` and `Save as`. `Export` also allows direct download or viewing of the current raw JSON.
 
 [[Import of IIIF|Import of IIIF Resources]] (for inclusion in the current manifest) and [[Import of Content|Import of Content Resources]] resources are also available via the Shell. The former adds resources to Vault but not to the Manifest (that's the App's job). The latter returns a Content Resource to the App, for (usually) including in the Manifest. A plugin that provides content resources might be doing more than simply passing on the URL of a web hosted image: it might be browsing an institutional image server, or even triggering the creation of a IIIF Image Service from an uploaded image. 
