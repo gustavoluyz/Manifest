@@ -1,2 +1,15 @@
 The Manifest Editor is a framework for editing IIIF resources. Mostly Manifests, but it could be used for Collections, Annotation Lists and other JSON documents as further application components are developed.
 
+1. [[Introduction]]
+1. [[Shell]]
+1. [[Apps]]
+1. [[Persistence]]
+1. [[Preview]]
+1. [[Import of IIIF Resources]]
+1. [[Import of Content Resources]]
+1. [[IIIF Browser]]
+1. [[Undo and Redo]]
+1. [[GitHub Integration]]
+1. [[Configuration]]
+1. [[List of Components]]
+1. [[Extending Manifest Editor]]
