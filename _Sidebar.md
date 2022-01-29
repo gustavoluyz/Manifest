@@ -2,7 +2,7 @@
 1. [[Shell]]
 1. [[Apps]]
 1. [[Loading IIIF for Editing]]
-1. [[Persistence]]
+1. [[Saving IIIF]]
 1. [[Preview]]
 1. [[Import of IIIF Resources]]
 1. [[Import of Content Resources]]
