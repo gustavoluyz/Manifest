@@ -1,7 +1,7 @@
 The App is everything below the [[Shell]] top bar.
 
 The App's job is to modify the IIIF resource loaded in Vault, but not to Load or Save it, or [[Preview]] it, or export it.
-It's also not the App's job to obtain _other_ IIIF resources, for inclusion in the current IIIF resource; it can let the Shell handle that through its [[Import]] facility.
+It's also not the App's job to obtain _other_ IIIF resources, for inclusion in the current IIIF resource; it can let the Shell handle that through its [[Import|Import of IIIF Resources]] facility.
 However, unlike load/save, an App obtaining its own references to external IIIF and putting them in Vault itself is not disallowed - this might suit some Apps (e.g., [[Sorting Room]] might want to present a different kind of source view inside the App panel and allow drag and drop). This is OK because they are all external - The Undo stack does not apply to them, they aren't being loaded or saved.
 
 ![App vs Shell](https://user-images.githubusercontent.com/1443575/151580517-d69ee3dd-c6b8-4814-8d67-923b3130836e.png)
