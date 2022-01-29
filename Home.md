@@ -3,6 +3,7 @@ The Manifest Editor is a framework for editing IIIF resources. Mostly Manifests,
 1. [[Introduction]]
 1. [[Shell]]
 1. [[Apps]]
+1. [[Loading IIIF for Editing]]
 1. [[Persistence]]
 1. [[Preview]]
 1. [[Import of IIIF Resources]]
