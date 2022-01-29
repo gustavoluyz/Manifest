@@ -6,6 +6,11 @@ Many users of the ME do not need this ability, especially inside a museum, libra
 
 The method by which this casual user transforms an image on their desktop (or even phone) into a hosted image, or hosted image service, is via a plugin that provides an [[Import of Content Resources]] component for the Shell that is able to trigger hosting and, sometimes, transformation to an image service.
 
+## Export
+
+This is simple so get this out of the way. The Shell generates a pseudo download JSON blob or preview (show JSON in new window or modal, user can cut and paste). This is always available unless explicitly configured off.
+
 ## Save and Save as 
 
-(from Google Doc)
+## Permalink
+
