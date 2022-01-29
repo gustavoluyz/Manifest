@@ -12,5 +12,12 @@ This is simple so get this out of the way. The Shell generates a pseudo download
 
 ## Save and Save as 
 
-## Permalink
+### Permalink
+
+### GH
+
+### Save to IIIF - Collection URLs accept posts of manifest JSON, like saving a file. You can also PUT a manifest to a URL. We could provide a docker image that implements this over an S3 backend? We could host one or you can host one… Uses [[IIIF Browser]] too!
+
+NB we won't do this initially but it could follow on.
+
 
