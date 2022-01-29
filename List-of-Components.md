@@ -23,4 +23,5 @@ This is a list of components Digirati are developing as part of the work for TAN
  - [[Language Map editor]]
  - [[IIIF Metadata editor]]
  - [[Canvas Editor]] - for complex composition
- - [[]]
+ - [[Annotations]] - this might involve capture models...
+ - Various bespoke widgets for IIIF props like Provider, seeAlso..
