@@ -57,13 +57,13 @@ const myShellConfig =  {
     ],
 
     'a-nested-slot': [
-       // This widget has it's own slots!
-       [MyNestedCustomWidget, { 
-         widgets: {
-            'my-nested-custom-widget-slot': [SomeOtherOverride],
-         }
-         configValue: 'some value' }
-       ]
+      // This widget has it's own slots!
+      [MyNestedCustomWidget, { 
+        widgets: {
+          'my-nested-custom-widget-slot': [SomeOtherOverride],
+        }
+        configValue: 'some value' 
+      }]
     ],
   },
 }
