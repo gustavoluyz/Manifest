@@ -22,3 +22,14 @@ We can implement a DLCS plugin here and a [[GitHub Integration]] (that depends o
 
 This is a design decision, explored in [User's mental model of the Canvas](https://github.com/digirati-co-uk/iiif-manifest-editor/discussions/29).
 The key thing here is that *Import of Content Resources*, whether from File->Import or from icons in the Shell top bar, can be used to create a new Canvas and place that external resource on it, in one action. And that this is the usual course of events, because that's usually what people are doing - adding a new image to a sequence of images - the manifest.
+
+## Recent
+
+Here, Recent is not quite the same as in browsing for a manifest - it includes that, but it also has pure content (not presentation 3) sources - plain Image URLs, Image services.
+
+## GitHub (NOTES WIP)
+
+Maybe we do still have GH here because we can log in with GitHub and provide a direct upload for you to get an image from your desktop to a gh-pages location. This is a special case and is different from the regular browse manifest: needs to check that the image is web-servable - this is not necessarily the case with Save manifest to GitHub because you might not be serving your manifests from GH.
+The GH integration is great for persistence generally, but by not depending on it for viewing, we don't require the branch you commit to to be a gh-pages branch. You can do what you like with GH, save your manifest there, part of some other workflow.
+Similarly, people who integrate the ME with their CMS (like V&A) don't have to ensure that the saved manifest is web-servable immediately. Obviously at some point that manifest has to end up on the web (why are you editing it otherwise) but it doesn't have to be coupled to how it gets saved from the ME.
+
