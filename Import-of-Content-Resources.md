@@ -17,3 +17,8 @@ But if I import an image, the import dialog needs to return a public URL for tha
 ## Import from Desktop, or IIIF-ising of existing images
 
 We can implement a DLCS plugin here and a [[GitHub Integration]] (that depends on the image being committed to a gh-pages branch, or picked up by some other process); other people can implement plugins for their own integrations. Is the GH plugin the same as the one used for loading and saving Manifests? Yes, but the user just needs to be aware of the gh-pages requirement. And if the image is picked up for transformation, the ME needs to know what it should put into the Manifest. The DLCS plugin has the same responsibility.
+
+## Import behaviour
+
+This is a design decision, explored in [User's mental model of the Canvas](https://github.com/digirati-co-uk/iiif-manifest-editor/discussions/29).
+The key thing here is that *Import of Content Resources*, whether from File->Import or from icons in the Shell top bar, can be used to create a new Canvas and place that external resource on it, in one action. And that this is the usual course of events, because that's usually what people are doing - adding a new image to a sequence of images - the manifest.
