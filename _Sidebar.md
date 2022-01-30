@@ -15,3 +15,5 @@
 1. [[Configuration]]
 1. [[List of Components]]
 1. [[Extending Manifest Editor]]
+1. [[Multiple instances and Collaboration]]
+1. [[REST Protocol]]
