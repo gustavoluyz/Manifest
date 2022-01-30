@@ -1,4 +1,76 @@
-## Widget - technical overview
+## Apps - technical overview
+
+An App is a full editor that is loaded into the [[Shell]]. It may be composed of multiple widgets or it may be a standalone entity.
+
+When an App loads a specific widget, it will open the slot it renders the widget to extension.
+
+If I had some code that embedded a widget
+```jsx
+function MyApp() {
+  const someLocator = { id: currentCanvasId, type: 'Canvas' };
+  
+  return (
+    <div>
+      <MyDefaultWidget 
+        locator={someLocator} 
+        config={ ... } 
+      />
+    </div>
+  );
+}
+```
+
+
+I could instead provide an integration point for the future quite easily:
+```jsx
+function MyApp() {
+  const someLocator = { id: currentCanvasId, type: 'Canvas' };
+  
+  return (
+    <div>
+      <WidgetSlot 
+        id="sidebar-slot"
+        locator={someLocator} 
+        defaultWidget={MyDefaultWidget} 
+        config={ ... } 
+      />
+    </div>
+  );
+}
+```
+
+In this example, a `<WidgetSlot />` is configured, with the default component `<MyDefaultWidget />`. It has an identifier `sidebar-slot` and the locator and config is passed down to it.
+
+This could allow the [[Shell]] to configure the application without further action from the App.
+
+Demonstrative config:
+```js
+const myShellConfig =  {
+
+  // Overriding widgets.
+  widgets: {
+    'sidebar-slot': [MyCustomWidget, MyDefaultWidget], // Multiple, can use the default as a fallback. (see .supports() below)
+
+    'another-slot': [
+       // Alternatively with custom configuration values.
+       [MyOtherCustomWidget, { configValue: 'some value' }]
+    ],
+  },
+}
+```
+
+This is not to say that this will be exactly how this will work, but instead to demonstrate that with the right conventions and models this type of extension is achievable. The MVP non-configurable implementation of `WidgetSlot` might be:
+```
+function WidgetSlot(props) {
+  const Component = props.defaultWidget;
+
+  return <Component locator={props.locator} config={props.config} />;
+}
+```
+But places the integration point for the future.
+
+
+## Widgets - technical overview
 
 When a widget is loaded it will be provided with some standard properties, and some custom configuration - specific to that widget.
 
