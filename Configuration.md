@@ -1,4 +1,5 @@
 (WARNING - ROUGH NOTES WIP)
+(TODO - JSON Examples of Config)
 
 Let’s not implement separate viewers for Ocean Liners, Mosaics; let’s do this all through config of the standard Manifest Editor.
 
