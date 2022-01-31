@@ -13,6 +13,7 @@ But if I import an image, the import dialog needs to return a public URL for tha
 
 **It is the import dialog’s responsibility to return an image resource - a content resource as might appear in a Manifest - to the ME, rather than just an image URL. Then the dialog can decide exactly what that looks like, what the image URL is, what the image service is, if one is being provided.**
 
+**The import dialog (in Shell) adds the resource to Vault, constructing an `id/type` resource if necessary, and then returns the Vault reference. But it wouldn't add that image resource to the Vault-managed _Manifest_, that's something that the user will drive the App UI to do ... the Shell's import doesn't know where to put it!**
 
 ## Import from Desktop, or IIIF-ising of existing images
 
