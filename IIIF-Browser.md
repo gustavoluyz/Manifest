@@ -2,7 +2,7 @@ aka Content State Selector
 
 This is a component of a component:
 
- - it's part of the File -> Open for opening a manifest for editing
+ - it's part of the File -> Open for [[Loading IIIF for Editing|opening a manifest for editing]]
  - it's also part of the [[Import of IIIF Resources]] process for selecting resources for inclusion in the manifest being edited (e.g., a canvas)
  - it's also part of the [[Import of Content Resources]] process, though it behaves in a different way
 
