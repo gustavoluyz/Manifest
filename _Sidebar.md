@@ -17,3 +17,4 @@
 1. [[Extending Manifest Editor]]
 1. [[Multiple instances and Collaboration]]
 1. [[REST Protocol]]
+1. [[Content locators]]
