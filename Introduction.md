@@ -4,3 +4,6 @@ Then there are [[Apps]] - inside the Shell, that provide the editing UI for the 
 
 [[Configuration]] establishes what plugins are available in the Shell, what Apps are available within the Shell, what top-level menu items are available (e.g., configuration of multiple preview environments appropriate to the work). Each app has two types of configuration - firstly, what it needs available or hidden in the Shell's menus, and secondly its own configuration. For the Manifest Editor App, its own configuration specifies whether some parts of the manifest, or properties, are not available for editing, and also constraints and/or extensions on properties, like extra `behavior` values. This allows the general manifest editor to be optimised for particular custom editing tasks without necessarily having to create a bespoke app for that task.
 
+Both the Shell and Apps make use of Widgets - components that form a sub-part of the UI.
+In the Shell, these are the various customisable sources and destinations for loading, saving and importing IIIF, and importing content resources.
+In Apps, they are the various editing controls - e.g., a label editor - and navigation components like trees and canvas thumbnail strips. One of the Widgets is the editable Canvas itself, a component that uses [Canvas Panel](https://iiif-canvas-panel.netlify.app/).
