@@ -19,3 +19,4 @@ The Manifest Editor is a framework for editing IIIF resources. Mostly Manifests,
 1. [[Extending Manifest Editor]]
 1. [[Multiple instances and Collaboration]]
 1. [[REST Protocol]]
+1. [[Content locators]]
