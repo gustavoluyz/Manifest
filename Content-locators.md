@@ -2,6 +2,8 @@ A content locator is a slice of a IIIF document. It can be thought of as a IIIF 
 
 Goals:
 * Select any slice of IIIF content to the lowest possible granularity.
+* Resolvable in the current Vault (with partOf if required)
+* Serialisable and portable - possibly across ME instances in the future
 
 ### Examples of content locators.
 
