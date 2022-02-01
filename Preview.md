@@ -29,6 +29,10 @@ The other entries by default accept URL templates into which they insert the Pre
 
 The Editor sends the JSON to the service, waits for a 20x HTTP response, and only then invokes the preview (e.g., open the UV in a new window, showing the manifest at that Preview URL).
 
+## Preview and Permalink
+
+By default the preview service has a 48 hr expiry time. But exactly the same service is available from the [[Save|Saving IIIF]] menu, as a permalink - the only difference is that when saved here, the hosted IIIF resource does not expire, so can be shared.
+
 ## Customising the Preview
 
 This is where custom config adds in specific viewing environments (or removes Mirador/UV). For example, a custom slideshow viewer, or a digital exhibition like Delft.
