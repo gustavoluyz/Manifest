@@ -21,8 +21,7 @@ While all of these are valid, it's much easier to *always be able to stage the m
 
 All instances of the Manifest Editor have access to the service described in this RFC:
 
-https://github.com/digirati-co-uk/iiif-manifest-editor/pull/34 
-(update link when published)
+https://github.com/digirati-co-uk/iiif-manifest-editor/blob/main/docs/rfcs/001-iiif-sandbox.md
 
 This adds a "Raw Manifest" link as the first item in the Preview menu - every time it's invoked, a new version will be pushed to the preview service (using the Update address).
 The other entries by default accept URL templates into which they insert the Preview URL. 
@@ -33,6 +32,42 @@ The Editor sends the JSON to the service, waits for a 20x HTTP response, and onl
 
 By default the preview service has a 48 hr expiry time. But exactly the same service is available from the [[Save|Saving IIIF]] menu, as a permalink - the only difference is that when saved here, the hosted IIIF resource does not expire, so can be shared.
 
-## Customising the Preview
+## Customising the Preview via Config
 
 This is where custom config adds in specific viewing environments (or removes Mirador/UV). For example, a custom slideshow viewer, or a digital exhibition like Delft.
+
+The preview button and its dropdown are set from config, with the direct button press being the same as the first item in the dropdown.
+We allow for other preview mechanisms in future by stating that this preview entry uses the preview service. For this, a preview entry must provide a format string - that tells the Manifest Editor where to insert manifest URIs. E.g.,
+
+```json
+"preview": [
+  {
+    "label": "Universal Viewer",
+    "mechanism": "previewService",
+    "template": "https://universalviewer.io/examples/#?manifest={iiifResource}" 
+  },
+  {
+    "label": "Ocean Liners",
+    "mechanism": "previewService",
+    "template": "https://canvas-panel.digirati.com/#/examples/fullpage?manifest={iiifResource}" 
+  },
+  {
+    "label": "Raw Manifest",
+    "mechanism": "previewService",
+    "template": "{iiifResource}" 
+  }
+]
+```
+
+(see [[Configuration]] for more details).
+
+## Informing the user
+
+The Manifest Editor should be aware of the TTL set by the preview and inform the user. 
+When clicking the preview button or an option from the drop down, the Manifest Editor:
+
+1. Pushes the current Manifest to the preview service
+2. If any errors, show message and abort
+3. Once it has a response with a ttl, open a new window on the formatted template string, replacing {iiifResource} with the URL
+4. Using a non-modal alert (e.g., a bar) message the user that the link will expire in xxx hrs.
+5. Include a "don't show again" in this bar.
