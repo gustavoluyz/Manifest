@@ -18,7 +18,7 @@ The client can indicate the required URL of the manifest in its `id` property, b
 
 The relationship between `id` in the POSTed manifest and on the server is an implementation decision, the protocol is the same either way, making this flexible.
 
-The server returns a 201 Created if the operation resulted in a new resource being created, or a 204 if the operation updated an existing resource (which might be the case if the `id` of the manifest is that of one already in the collection - again, an implementation decision.
+The server returns a 201 Created if the operation resulted in a new resource being created, or a 204 if the operation updated an existing resource (which might be the case if the `id` of the manifest is that of one already in the collection - again, an implementation decision).
 
 Either way, for 201 and 204, the server returns a `Location` header with the `id` of the now dereferenceable manifest, so that the editor can carry on with that URL.
 
