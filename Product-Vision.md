@@ -15,6 +15,6 @@ To support this vision the tool needs to address two fundamental user goals:
  - To quickly and visually assemble IIIF manifests
  - To easily create bespoke content for digital user experiences
  
-The product will be customisable to suit different tasks and easy to integrate into existing tools and workflows. While integration and configuration may require technical expertise, the user interface for for Manifest editing should not require digital skills beyond the requirements of tools like Google Slides.
+The product will be customisable to suit different tasks and easy to integrate into existing tools and workflows. While integration and configuration may require technical expertise, the user interface for Manifest editing should not require digital skills beyond the requirements of tools like Google Slides.
 
 Ongoing sustainability of the Manifest Editor is a key concern which will be best addressed by making the tool open source and achieving sector-wide adoption. Furthermore, the development team behind this tool at Digirati will provide ongoing governance for new releases. While the tool will be free to download, adapt and use, Digirati will provide support, development and hosting services for those who require it.
