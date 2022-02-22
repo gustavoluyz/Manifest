@@ -1,3 +1,7 @@
+[[Product Vision]]
+
+#### Technical Information
+
 1. [[Introduction]]
 1. [[Shell]]
 1. [[Apps]]
@@ -19,5 +23,3 @@
 1. [[Multiple instances and Collaboration]]
 1. [[REST Protocol]]
 1. [[Content locators]]
-
-[[Product Vision]]
