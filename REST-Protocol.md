@@ -87,3 +87,7 @@ Questions:
 
  - how do you rename a storage container collection?
  - how do you delete items members where they are references rather than stored resources? (stored resources can just be DELETEd with HTTP)
+
+## Access Control
+
+As an API interaction, all the above has nothing to do with IIIF Auth. It suits an OAuth2 interaction. A client like the Manifest Editor can acquire tokens on behalf of the user by logging in. This protocol should not describe those tokens. The might be (are likely to be) JWT but that's an implementation decision, the tokens are opaque to clients like Manifest Editor.
