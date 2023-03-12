@@ -91,3 +91,25 @@ Questions:
 ## Access Control
 
 As an API interaction, all the above has nothing to do with IIIF Auth. It suits an OAuth2 interaction. A client like the Manifest Editor can acquire tokens on behalf of the user by logging in. This protocol should not describe those tokens. The might be (are likely to be) JWT but that's an implementation decision, the tokens are opaque to clients like Manifest Editor.
+
+## Change Discovery API
+
+A IIIF Repository implementing this protocol should also implement the IIIF Change Discovery API.
+(IIIF Builder might want to browse such endpoints)
+
+## Comparison with Web Annotation Protocol
+
+(see https://www.w3.org/TR/annotation-protocol/#annotation-containers)
+
+ - We don't need our collections-as-storage-containers to be [Linked Data Platform Containers](https://www.w3.org/TR/ldp/#ldpc-container)
+ - We could adopt the rule that a container's URI must end with a `/`
+
+## Limitations
+
+By adopting the IIIF Collection as a container, we keep things simple but we lose formal paging. Organisation of Collections into manageable units becomes a client concern (don't put 100,000 manifests in a single container and expect the resulting IIIF Collection to be usable).
+
+If the need for paged containers becomes strong, the protocol could also support containers as [Activity Streams Ordered Collections](https://www.w3.org/TR/activitystreams-core/#collections) - and could be the same container, a different resource URI exposes the "virtual" collection it as an OrderedCollection.
+
+IIIF Explorer can be made to navigate OrderedCollections, with paging support.
+
+Search/autocomplete for items in collections (IIIF or AS Ordered) can be layered on top.
